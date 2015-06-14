@@ -91,10 +91,9 @@ class BibtexProvider
 
         for author in citation.entryTags.authors
           possibleWords.push {
-            author: @prettifyName(author, yes),
+            author: citation.citationKey,
             key: citation.citationKey,
-            label: "#{citation.entryTags.prettyTitle} \
-              by #{citation.entryTags.prettyAuthors}"
+            label: "#{citation.entryTags.prettyTitle}"
           }
 
     @possibleWords = possibleWords
